@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ["Plus Jakarta Sans", "sans-serif"],
+    },
+    container: {
+      center: true,
+    },
+    extend: {
+      fontFamily: {
+        arabic: ["Amiri"],
+      },
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };

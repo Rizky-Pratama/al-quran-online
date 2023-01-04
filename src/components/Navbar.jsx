@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
-import Container from "./Container";
 
 function Navbar() {
   return (
-    <nav className="navbar bg-neutral text-neutral-content">
-      <Container>
-        <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">RizLam</a>
+    <nav className="text-white bg-stone-900">
+      <div className="container h-16 flex justify-between items-center">
+        <div className="flex items-center">
+          <a className="text-2xl font-semibold">RizLam</a>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal p-0">
-            <li>
-              <Link to="/">Surah</Link>
+        <div className="">
+          <ul className="p-0 flex">
+            <li className="flex items-center">
+              <Link to="/" className="py-2 px-4 text-base font-medium rounded-sm transition  hover:bg-white hover:text-stone-900">
+                Surah
+              </Link>
             </li>
-            <li>
-              <Link to="/tafsir">Tafsir</Link>
+            <li className="flex items-center">
+              <Link to="/tafsir" className="py-2 px-4 text-base font-medium rounded-sm transition  hover:bg-white hover:text-stone-900">
+                Tafsir
+              </Link>
             </li>
           </ul>
         </div>
-      </Container>
+      </div>
     </nav>
   );
 }

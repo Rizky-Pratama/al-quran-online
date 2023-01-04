@@ -7,16 +7,18 @@ function BacToTop() {
     const scrolled = window.scrollY;
     scrolled > 100 ? setShow(true) : setShow(false);
   };
+
   const handlerToTop = () => {
     document.documentElement.scrollTop = 0;
   };
+
   document.addEventListener("scroll", toogleHidden);
   return (
     <button
       onClick={handlerToTop}
       className={`${
-        show ? "static" : "hidden"
-      } fixed bottom-5 right-10 px-4 py-2 rounded-full bg-neutral text-white`}
+        show ? "" : "hidden"
+      } fixed bottom-5 right-10 px-4 py-2 rounded-full bg-stone-900 text-white`}
     >
       Atas
     </button>
